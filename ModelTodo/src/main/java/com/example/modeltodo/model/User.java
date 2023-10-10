@@ -14,8 +14,11 @@ public class User {
     private long id;
 
     private String name;
+
     @OneToMany(mappedBy = "user", orphanRemoval = true)
     private List<Todo> todos;
+
+
 
     public User() {
 
@@ -44,4 +47,5 @@ public class User {
     public void setTodos(List<Todo> todos) {
         this.todos = todos;
     }
+
 }

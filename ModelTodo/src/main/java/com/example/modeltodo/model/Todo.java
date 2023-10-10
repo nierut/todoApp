@@ -1,11 +1,9 @@
 package com.example.modeltodo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
+@Table
 
 public class Todo {
     @Id
@@ -44,7 +42,6 @@ public class Todo {
     public void setCompleted(boolean completed) {
         this.completed = completed;
     }
-
     public User getUser() {
         return user;
     }
@@ -52,4 +49,5 @@ public class Todo {
     public void setUser(User user) {
         this.user = user;
     }
+
 }
